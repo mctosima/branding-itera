@@ -275,10 +275,13 @@ body.on-slide .fbar,body.on-slide footer{display:none}
 .s-ev i{font-style:normal;font-family:Oswald,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F2A72B;font-size:21px}
 .s-ev b{font-size:28px;line-height:1.25}
 .s-ev span{font-size:21px;color:#6E655C}
-.s-tip{display:grid;grid-template-columns:52px 1fr;gap:4px 16px;padding:20px 22px;align-content:start}
-.s-tip i{grid-row:span 2;width:52px;height:52px;border-radius:50%;background:#8E0B0B;color:#fff;font-style:normal;font-family:Oswald,sans-serif;font-weight:700;display:grid;place-items:center;font-size:26px}
-.s-tip b{font-size:29px;line-height:1.15;color:#8E0B0B}
-.s-tip span{font-size:22.5px;line-height:1.38;color:#4A433C}
+.s-col{display:grid;gap:14px;grid-template-rows:auto 1fr 1fr}
+.s-col>.s-lab{color:#8E0B0B;font-size:24px;border-bottom:3px solid #F2A72B;padding-bottom:6px}
+.s-col>.s-lab em{font-style:normal;color:#F2A72B;margin-right:8px}
+.s-tip{display:grid;grid-template-columns:44px 1fr;gap:3px 14px;padding:18px 20px;align-content:start}
+.s-tip i{grid-row:span 2;width:44px;height:44px;border-radius:50%;background:#8E0B0B;color:#fff;font-style:normal;font-family:Oswald,sans-serif;font-weight:700;display:grid;place-items:center;font-size:23px}
+.s-tip b{font-size:25px;line-height:1.18;color:#1E1A17}
+.s-tip span{font-size:20px;line-height:1.38;color:#4A433C}
 .s-rambu{display:flex;align-items:center;gap:34px;margin-top:20px;padding:14px 26px;font-size:22px;white-space:nowrap}
 .s-rambu>b{font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F2A72B;font-size:21px}
 .s-ul{margin:0;padding:0;list-style:none}
@@ -851,22 +854,24 @@ html.solo .stage{width:100vw;height:100vh;max-height:none;border:0;border-radius
   </div>
 </div>
 
-<!-- 17. AI UNTUK BRANDING DI UNIT (masukan Hafiz) -->
+<!-- 17. BAWA PULANG KE UNIT (masukan Hafiz): tips praktis = simpulan bagian 1–3 -->
 <div class="sl">
-  <span class="s-kick">Usulan · Untuk semua unit</span>
-  <h2>AI untuk branding di tiap unit</h2>
-  <div class="s-small" style="margin:-4px 0 16px">Fakultas, prodi, lembaga, biro, dan UPA sama-sama punya cerita. AI membantu menceritakannya lebih cepat dan lebih rapi.</div>
-  <div class="s-grid" style="grid-template-columns:1fr 1fr 1fr;gap:18px 22px">
-    <div class="s-card s-tip"><i>1</i><b>Cepat jadi berita</b><span>Catatan atau foto kegiatan diubah jadi draf berita web dan caption medsos.</span></div>
-    <div class="s-card s-tip"><i>2</i><b>Mudah dipahami</b><span>Hasil riset atau info teknis diceritakan ulang dengan bahasa awam.</span></div>
-    <div class="s-card s-tip"><i>3</i><b>Satu suara</b><span>Gaya bahasa dan nama Itera sama di semua akun unit, lewat template prompt bersama.</span></div>
-    <div class="s-card s-tip"><i>4</i><b>Konten visual</b><span>Ide poster, infografis, dan video pendek dari satu bahan yang sama.</span></div>
-    <div class="s-card s-tip"><i>5</i><b>Dengarkan audiens</b><span>Rangkum komentar dan pertanyaan di akun unit: apa yang disukai, apa yang dikeluhkan.</span></div>
-    <div class="s-card s-tip"><i>6</i><b>Jawab lebih cepat</b><span>Draf balasan untuk calon mahasiswa, orang tua, dan mitra dari informasi resmi.</span></div>
+  <span class="s-kick">Untuk semua unit</span>
+  <h2>Bawa pulang ke unit: enam langkah praktis</h2>
+  <div class="s-small" style="margin:-4px 0 16px">Simpulan dari tiga bagian tadi, dalam versi yang bisa dikerjakan fakultas, prodi, lembaga, biro, dan UPA.</div>
+  <div class="s-grid" style="grid-template-columns:1fr 1fr 1fr;gap:22px">
+    <div class="s-col"><div class="s-lab"><em>01</em> Identitas</div>
+      <div class="s-card s-tip"><i>1</i><b>Pakai satu nama</b><span>“Institut Teknologi Sumatera (Itera)” di publikasi, situs, dan akun unit. Mesin membaca nama apa adanya.</span></div>
+      <div class="s-card s-tip"><i>2</i><b>Tanya AI tentang unit Anda</b><span>Jawabannya keliru atau usang? Perbarui profil unit dan dosen di situs, SINTA, Scholar.</span></div></div>
+    <div class="s-col"><div class="s-lab"><em>02</em> Narasi</div>
+      <div class="s-card s-tip"><i>3</i><b>Tampilkan pakar unit</b><span>Kirim daftar kepakaran dosen ke Humas, siap dihubungi saat ada isu.</span></div>
+      <div class="s-card s-tip"><i>4</i><b>Ceritakan dengan bahasa awam</b><span>AI membantu mengubah riset dan kegiatan jadi draf berita; pakarnya yang memeriksa.</span></div></div>
+    <div class="s-col"><div class="s-lab"><em>03</em> Reputasi</div>
+      <div class="s-card s-tip"><i>5</i><b>Dengar lebih awal</b><span>AI membantu merangkum komentar dan berita tentang unit. Isu sensitif segera ke Humas.</span></div>
+      <div class="s-card s-tip"><i>6</i><b>Beri AI konteks</b><span>Jelaskan tujuan dan beri contoh. AI membantu, manusia yang memutuskan.</span></div></div>
   </div>
   <div class="s-card s-redcard s-rambu"><b>Rambu</b>
-    <span>AI membantu menulis, manusia yang memutuskan</span>
-    <span>✗ data pribadi</span>
+    <span>✗ data pribadi ke AI publik</span>
     <span>✓ cek fakta sebelum unggah</span></div>
 </div>
 
@@ -988,7 +993,7 @@ html.solo .stage{width:100vw;height:100vh;max-height:none;border:0;border-radius
 </main>
 
 <footer>
-  <span>Sumber: Google News RSS (19 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 03 Nov 2026 00:29</span>
+  <span>Sumber: Google News RSS (19 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 03 Nov 2026 00:32</span>
   <span>Prototipe riset untuk FGD Branding Itera, bukan data resmi institusi.</span>
 </footer>
 
