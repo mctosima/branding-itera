@@ -963,7 +963,7 @@ html.solo .stage{width:100vw;height:100vh;max-height:none;border:0;border-radius
 </main>
 
 <footer>
-  <span>Sumber: Google News RSS (19 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 02 Nov 2026 18:14</span>
+  <span>Sumber: Google News RSS (19 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 02 Nov 2026 18:26</span>
   <span>Prototipe riset untuk FGD Branding Itera, bukan data resmi institusi.</span>
 </footer>
 
@@ -2011,7 +2011,8 @@ function renderRisiko() {
   g.append("text").attr("x", d => d.lx).attr("y", d => d.ly)
     .attr("text-anchor", d => d.anc)
     .attr("font-size", fs).attr("font-weight", 600).attr("fill", "#F6EFE6").style("paint-order", "stroke").attr("stroke", "#0B0807").attr("stroke-width", 3).text(d => d.l);
-  g.on("click", (e, d) => { S.risk = d.k; g.select(".core").attr("stroke-width", q => q.k === S.risk ? 2.5 : 0); rdetail(rows); })
+  g.on("click", (e, d) => { S.risk = d.k; g.select(".core").attr("stroke-width", q => q.k === S.risk ? 2.5 : 0); rdetail(rows);
+      const lst = document.querySelector("#rdetail .news"); if (lst && !SHOT) { const r = lst.getBoundingClientRect(); if (r.top > innerHeight - 80) lst.scrollIntoView({behavior:"smooth", block:"start"}); } })
     .on("mousemove", (e, d) => showTip(e, `<div class="tt">${esc(d.l)}</div>${tr("Jumlah berita", d.n)}${tr("Dampak tertinggi", LV[d.lv].l, LV[d.lv].c)}`)).on("mouseleave", hideTip);
   if (!rows.length) svg.append("text").attr("x", W / 2).attr("y", H / 2).attr("text-anchor", "middle").attr("fill", "#A69B90").text("Tidak ada berita kategori risiko pada filter ini.");
   rdetail(rows);
@@ -2029,7 +2030,8 @@ function rdetail(rows) {
       <dt>Target respons</dt><dd>${sla[r.lv]}</dd>
       <dt>Prinsip</dt><dd style="font-weight:500">${esc(u.prinsip || "Akurat, satu suara")}</dd></dl>
     <div class="note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Unit dan target waktu adalah usulan untuk dibahas di FGD, bukan SOP resmi.</div>`
-    + (D.riskNews ? riskNewsList(r.k) : "");
+    + (D.riskNews ? riskNewsList(r.k) : `<div class="note" style="margin-top:14px;border:1px dashed var(--line2);border-radius:10px;padding:10px 12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+      <span>Ini versi <b style="color:var(--ink)">publik</b>: judul dan tautan berita risiko sengaja tidak dimuat. Daftar ${r.n} berita beserta tautannya ada di <b style="color:var(--ink)">versi internal</b> (berkas <code>radar-demo.html</code>).</span></div>`);
 }
 const RV = {insiden:["Isu nyata", "#F43F5E"], pantauan:["Perlu dipantau", "#F59E0B"], bukan:["Bukan risiko", "#8B8178"], belum:["Belum dicek", "#6F655C"]};
 function riskNewsList(k) {
