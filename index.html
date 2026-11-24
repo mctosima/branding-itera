@@ -998,7 +998,7 @@ html.solo .stage{width:100vw;height:100vh;max-height:none;border:0;border-radius
 </main>
 
 <footer>
-  <span>Sumber: Google News RSS (26 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 24 Nov 2026 11:46</span>
+  <span>Sumber: Google News RSS (26 kata kunci) · Label: LLM DeepSeek V4.1 Flash + IndoRoBERTa · Diperbarui 24 Nov 2026 11:49</span>
   <span>Prototipe riset untuk FGD Branding Itera, bukan data resmi institusi.</span>
 </footer>
 
@@ -2261,7 +2261,7 @@ function render(t, except) {
   ({ringkasan:renderRingkasan, jejaring:renderJejaring, awan:renderAwan, risiko:renderRisiko, slide:() => {}, cover:() => {}})[t](except);
 }
 function show(t) {
-  if (!document.getElementById("t-" + t)) t = "cover";
+  if (!document.getElementById("t-" + t)) t = "ringkasan";
   cur = t; hideTip();
   document.querySelectorAll("section.tab").forEach(s => s.classList.toggle("on", s.id === "t-" + t));
   document.querySelectorAll("nav.tabs a").forEach(a => a.classList.toggle("on", a.dataset.t === t));
@@ -2272,7 +2272,7 @@ function show(t) {
   render(t);
 }
 function route() {
-  const [t0, f] = (location.hash.slice(1) || "cover").split(":"), [t, anchor] = t0.split("@");
+  const [t0, f] = (location.hash.slice(1) || "ringkasan").split(":"), [t, anchor] = t0.split("@");
   if (t === "slide") { show("slide"); go(f && +f ? +f - 1 : deck.i); fitStage(); return; }
   if (f && ["all", "earned", "owned"].includes(f) && f !== S.src) { S.src = f; chips(); for (const k in dirty) dirty[k] = 1; }
   show(t);
